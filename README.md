@@ -14,5 +14,5 @@ see main.py
 
 ## Deps
 - solders
-- spl-token
 - solana
+- pydantic
