@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="sb-on-demand-randomness",
-    version="1.0.0",
+    version="1.0.1",
     description="Switchboard On Demand Randomness Python SDK",
     author="kingsznhone",
     packages=find_packages(),
