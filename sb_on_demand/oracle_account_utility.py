@@ -88,6 +88,8 @@ class OracleGatewayConfig(BaseModel):
 async def test_oracles(connection: AsyncClient, oracles: list[Pubkey]) -> list[Pubkey]:
     async def test_oracle(oracle: Pubkey) -> Optional[Pubkey]:
         try:
+            if oracle==Pubkey.from_string("11111111111111111111111111111111"):
+                return None
             oracle_data = await fetch_oracle_account_data(connection, oracle)
             if oracle_data:
                 # Filter for verified oracles (verification_status == 4) that are valid for at least 1 hour
